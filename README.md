@@ -2,6 +2,8 @@
 download arduino app from store or google.
 Make a new folder and copy the code given below.
 ..............................................Code start...........................................................................
+
+
 #include <AFMotor.h>
 #include <Servo.h>
 AF_DCMotor motor1(7); 
