@@ -1,6 +1,6 @@
 # AndroidBluetoothControlledCar
-download arduino app from store or google.
-Make a new folder and copy the code given below.
+AndroidBluetoothControlledCar is a repository on Coding in Arduino UNO. This is a simple code for operating a Android(Arduino-based)CAR using a Bluetooth Module.
+The following code should be written in ardunio app and it will function properly.
 ..............................................Code start...........................................................................
 
 
