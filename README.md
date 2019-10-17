@@ -1,7 +1,7 @@
 # AndroidBluetoothControlledCar
-AndroidBluetoothControlledCar is a repository on Coding in Arduino UNO. This is a simple code for operating a Android(Arduino-based)CAR using a Bluetooth Module.
+AndroidBluetoothControlledCar is a repository on Coding in Arduino UNO. This is a simple code for operating a Android (Arduino-based) CAR using a Bluetooth Module.
 The following code should be written in ardunio app and it will function properly.
-..............................................Code start...........................................................................
+......................................Code Begin.......................................
 
 
 #include <AFMotor.h>
@@ -79,5 +79,5 @@ void Stop()
 ...........................................................END.......................................................................
 
 \\The following code will implement few commands : FORWARD, BACK, LEFT,RIGHT,STOP....
-\\Working to improve it...n will create a new repository for the new version
+\\Working to improve it...n IA will create a new repository for the new version
 
