@@ -4,9 +4,9 @@ The following code should be written in ardunio app and it will function properl
 ......................................Code Begin.......................................
 <!-- Using Pin 4 and Pin 7 of Arduino -->
 
-#include <AFMotor.h>
-#include <Servo.h>
-AF_DCMotor motor1(7);    
+#include <AFMotor.h>      <!-- This is a header for AFMotor-->
+#include <Servo.h>        <!-- This is a header for ServoMotor -->
+AF_DCMotor motor1(7);     
 AF_DCMotor motor2(4); 
 char command; 
 void setup() 
@@ -14,7 +14,7 @@ void setup()
   Serial.begin(9600);  
   Serial.flush();                  
 }
-
+<!-- The following code is compactable with the Andriod Bluetooth App that can be easily found in PlayStore -->
 void loop(){
   if(Serial.available() > 0){ 
     command = Serial.read(); 
@@ -39,8 +39,8 @@ void loop(){
 }
 void forward()
 {
-  motor1.setSpeed(255); //Define maximum velocity
-  motor1.run(FORWARD); //rotate the motor clockwise
+  motor1.setSpeed(255); //Define maximum velocity    <!-- Spped lim,it may vary from 200-300 -->
+  motor1.run(FORWARD); //rotate the motor clockwise   
   motor2.setSpeed(255); //Define maximum velocity
   motor2.run(FORWARD); //rotate the motor clockwise
 }
@@ -57,13 +57,13 @@ void left()
 {
   motor1.setSpeed(255); //Define maximum velocity
   motor1.run(FORWARD); //rotate the motor clockwise
-  motor2.setSpeed(0);
+  motor2.setSpeed(0);                    
   motor2.run(RELEASE); //turn motor2 off
 }
 
 void right()
 {
-  motor1.setSpeed(0);
+  motor1.setSpeed(0);                            
   motor1.run(RELEASE); //turn motor1 off
   motor2.setSpeed(255); //Define maximum velocity
   motor2.run(FORWARD); //rotate the motor clockwise
