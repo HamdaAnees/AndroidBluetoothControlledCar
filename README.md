@@ -2,11 +2,11 @@
 AndroidBluetoothControlledCar is a repository on Coding in Arduino UNO. This is a simple code for operating a Android (Arduino-based) CAR using a Bluetooth Module.
 The following code should be written in ardunio app and it will function properly.
 ......................................Code Begin.......................................
-
+<!-- Using Pin 4 and Pin 7 of Arduino -->
 
 #include <AFMotor.h>
 #include <Servo.h>
-AF_DCMotor motor1(7); 
+AF_DCMotor motor1(7);    
 AF_DCMotor motor2(4); 
 char command; 
 void setup() 
@@ -76,6 +76,7 @@ void Stop()
   motor2.setSpeed(0);
   motor2.run(RELEASE); //turn motor2 off
 }
+
 ...........................................................END.......................................................................
 
 \\The following code will implement few commands : FORWARD, BACK, LEFT,RIGHT,STOP....
