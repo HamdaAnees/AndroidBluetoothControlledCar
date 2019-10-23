@@ -47,7 +47,13 @@ void loop(){
     case 'BR':
       backwardright();            //BACKWARD RIGHT
       break;
-    
+    case 'FL':  
+      forwardleft();             //FORWARD LEFT
+      break;
+    case 'FR':
+      forwardright();            //FORWARD RIGHT
+      break;
+
     }
   } 
 }
@@ -107,6 +113,22 @@ void backwardright()
   motor2.run(BACKWARD); //rotate the motor clockwise
 }
 
+void forwardleft()
+{
+  motor1.setSpeed(255); //Define maximum velocity
+  motor1.run(FORWARD); //rotate the motor clockwise
+  motor2.setSpeed(0);                    
+  motor2.run(RELEASE); //turn motor2 off
+
+}
+void forwardright()
+{
+  motor1.setSpeed(0);                            
+  motor1.run(RELEASE); //turn motor1 off
+  motor2.setSpeed(255); //Define maximum velocity
+  motor2.run(FORWARD); //rotate the motor clockwise
+
+}
 ...........................................................END.......................................................................
 
 \\The following code will implement few commands : FORWARD, BACK, LEFT,RIGHT,STOP....
