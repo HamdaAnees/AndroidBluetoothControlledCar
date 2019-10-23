@@ -57,76 +57,77 @@ void loop(){
     }
   } 
 }
+ <!-- Spped lim,it may vary from 200-300 -->
 void forward()
 {
-  motor1.setSpeed(255); //Define maximum velocity    <!-- Spped lim,it may vary from 200-300 -->
-  motor1.run(FORWARD); //rotate the motor clockwise   
-  motor2.setSpeed(255); //Define maximum velocity
-  motor2.run(FORWARD); //rotate the motor clockwise
+  motor1.setSpeed(255);             //Define maximum velocity   
+  motor1.run(FORWARD);              //rotate the motor clockwise   
+  motor2.setSpeed(255);             //Define maximum velocity
+  motor2.run(FORWARD);              //rotate the motor clockwise
 }
 
 void back()
 {
   motor1.setSpeed(255); 
-  motor1.run(BACKWARD); //rotate the motor counterclockwise
+  motor1.run(BACKWARD);             //rotate the motor counterclockwise
   motor2.setSpeed(255); 
-  motor2.run(BACKWARD); //rotate the motor counterclockwise
+  motor2.run(BACKWARD);             //rotate the motor counterclockwise
 }
 
 void left()
 {
-  motor1.setSpeed(255); //Define maximum velocity
-  motor1.run(FORWARD); //rotate the motor clockwise
+  motor1.setSpeed(255);         //Define maximum velocity
+  motor1.run(FORWARD);          //rotate the motor clockwise
   motor2.setSpeed(0);                    
-  motor2.run(RELEASE); //turn motor2 off
+  motor2.run(RELEASE);          //turn motor2 off
 }
 
 void right()
 {
   motor1.setSpeed(0);                            
-  motor1.run(RELEASE); //turn motor1 off
-  motor2.setSpeed(255); //Define maximum velocity
-  motor2.run(FORWARD); //rotate the motor clockwise
+  motor1.run(RELEASE);          //turn motor1 off
+  motor2.setSpeed(255);         //Define maximum velocity
+  motor2.run(FORWARD);          //rotate the motor clockwise
 }
 
 void Stop()
 {
   motor1.setSpeed(0);
-  motor2.run(RELEASE); //turn motor1 off
+  motor2.run(RELEASE);         //turn motor1 off
   motor2.setSpeed(0);
-  motor2.run(RELEASE); //turn motor2 off
+  motor2.run(RELEASE);        //turn motor2 off
 }
 
 void backwardleft() 
 {
-  motor1.setSpeed(0); //Define maximum velocity
-  motor1.run(BACKWARD); //rotate the motor anticlockwise
+  motor1.setSpeed(0);         //Define maximum velocity
+  motor1.run(BACKWARD);       //rotate the motor anticlockwise
   motor2.setSpeed(255);                    
-  motor2.run(RELEASE); //turn motor2 off
+  motor2.run(RELEASE);       //turn motor2 off
 
 }
 void backwardright()     
 {
   motor1.setSpeed(255);                            
-  motor1.run(RELEASE); //turn motor1 off
-  motor2.setSpeed(0); //Define maximum velocity
-  motor2.run(BACKWARD); //rotate the motor clockwise
+  motor1.run(RELEASE);       //turn motor1 off
+  motor2.setSpeed(0);        //Define maximum velocity
+  motor2.run(BACKWARD);     //rotate the motor clockwise
 }
 
 void forwardleft()
 {
-  motor1.setSpeed(255); //Define maximum velocity
-  motor1.run(FORWARD); //rotate the motor clockwise
+  motor1.setSpeed(255);    //Define maximum velocity
+  motor1.run(FORWARD);     //rotate the motor clockwise
   motor2.setSpeed(0);                    
-  motor2.run(RELEASE); //turn motor2 off
+  motor2.run(RELEASE);     //turn motor2 off
 
 }
 void forwardright()
 {
   motor1.setSpeed(0);                            
-  motor1.run(RELEASE); //turn motor1 off
-  motor2.setSpeed(255); //Define maximum velocity
-  motor2.run(FORWARD); //rotate the motor clockwise
+  motor1.run(RELEASE);    //turn motor1 off
+  motor2.setSpeed(255);   //Define maximum velocity
+  motor2.run(FORWARD);    //rotate the motor clockwise
 
 }
 ...........................................................END.......................................................................
