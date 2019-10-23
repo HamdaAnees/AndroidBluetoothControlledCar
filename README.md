@@ -14,26 +14,40 @@ void setup()
   Serial.begin(9600);  
   Serial.flush();                  
 }
+
 <!-- The following code is compactable with the Andriod Bluetooth App that can be easily found in PlayStore -->
+
 void loop(){
-  if(Serial.available() > 0){ 
+  if(Serial.available() > 0)
+  { 
     command = Serial.read(); 
+
     Stop();     //initialize state 
     Serial.println("Device Connected!");                         
     Serial.println(command);
-    switch(command){
-    case 'F':  
+    
+    switch(command)
+    {
+    case 'F':                     //FORWARD
       forward();
       break;
-    case 'B':  
+    case 'B':                     //BACKWARD
        back();
       break;
-    case 'L':  
+    case 'L':                     //LEFT  
       left();
       break;
-    case 'R':
+    case 'R':                     //RIGHT
       right();
       break;
+
+    case 'BL':  
+      backwardleft();             //BACKWARD LEFT
+      break;
+    case 'BR':
+      backwardright();            //BACKWARD RIGHT
+      break;
+    
     }
   } 
 }
@@ -75,6 +89,22 @@ void Stop()
   motor2.run(RELEASE); //turn motor1 off
   motor2.setSpeed(0);
   motor2.run(RELEASE); //turn motor2 off
+}
+
+void backwardleft() 
+{
+  motor1.setSpeed(0); //Define maximum velocity
+  motor1.run(BACKWARD); //rotate the motor anticlockwise
+  motor2.setSpeed(255);                    
+  motor2.run(RELEASE); //turn motor2 off
+
+}
+void backwardright()     
+{
+  motor1.setSpeed(255);                            
+  motor1.run(RELEASE); //turn motor1 off
+  motor2.setSpeed(0); //Define maximum velocity
+  motor2.run(BACKWARD); //rotate the motor clockwise
 }
 
 ...........................................................END.......................................................................
